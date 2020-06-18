@@ -26,10 +26,11 @@ public class Human {
 
     }
 
-    public void setCar(Car car) throws Exception {
-        if (car.getValue() == null || car.getValue() > this.salary * 12) {
-            throw new Exception("nie stać Cię");
-        } else this.car = car;
+    public void setCar(Car car) {
+        this.car=car;
+//        if (car.getValue() == null || car.getValue() > this.salary * 12) {
+//            throw new Exception("nie stać Cię");
+//        } else this.car = car;
     }
 
     public String getFirstName() {

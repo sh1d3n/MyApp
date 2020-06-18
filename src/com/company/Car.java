@@ -1,11 +1,16 @@
 package com.company;
 
 public class Car {
-    private String producer;
-    private String model;
+    private final String producer;
+    private final String model;
     private Integer yearOfProduction;
     private String plates;
     private Integer value;
+
+    public Car(String producer, String model) {
+        this.producer = producer;
+        this.model = model;
+    }
 
     public String getPlates() {
         return plates;
@@ -23,16 +28,8 @@ public class Car {
         return producer;
     }
 
-    public void setProducer(String producer) {
-        this.producer = producer;
-    }
-
     public String getModel() {
         return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 
     public Integer getYearOfProduction() {
