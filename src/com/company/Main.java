@@ -36,17 +36,21 @@ public class Main {
         dog.sell(seller,buyer,10000.0);
 
         Human rob=new Human();
+        rob.setLastName("Rob");
         rob.setCar(0,car);
         rob.setCar(1,car2);
         System.out.println(rob.sumCarValue());
         rob.setCash(13000.0);
 
         Human andrzej=new Human();
+        andrzej.setLastName("Andrzej");
         andrzej.setCash(20000.0);
         car.sell(rob,andrzej,1000.0);
 
+        System.out.println(car.wasOwner(andrzej.getLastName()));
 
+        car.sell(andrzej, rob,1000.0);
 
+        System.out.println(car.wasCarSelled(andrzej, rob));
     }
-
 }
