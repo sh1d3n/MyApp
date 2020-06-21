@@ -27,6 +27,13 @@ public class Main {
         car.turnOn();
         phone.turnOn();
 
+        Human seller= new Human();
+        seller.setPet(dog);
+        seller.setCash(15000.0);
+        Human buyer=new Human();
+        buyer.setCash(100000.0);
+        dog.sell(seller,buyer,10000.0);
+
     }
 
 }

@@ -2,16 +2,18 @@ package com.company;
 
 import com.company.devices.Car;
 import com.company.devices.Phone;
+import com.company.devices.Salleable;
 
 import java.time.LocalDateTime;
 
-public class Human {
+public class Human implements Salleable {
     private Car car;
     private String firstName;
     private String lastName;
     private Phone mobile;
     private Animal pet;
     private Double salary = 1000.0;
+    private Double cash;
 
 
 
@@ -102,6 +104,23 @@ public class Human {
                 ", pet=" + pet +
                 ", salary=" + salary +
                 '}';
+
+    }
+
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        System.out.println("You can't trade people");
+    }
+
+    public Human() {
     }
 }
 

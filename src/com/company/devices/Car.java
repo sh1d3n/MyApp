@@ -1,12 +1,13 @@
 package com.company.devices;
 
+import com.company.Human;
+
 import java.util.Objects;
 
-public class Car extends Device {
+public class Car extends Device implements Salleable {
 
     private String plates;
     private Integer value = 10000;
-
 
 
     public String getPlates() {
@@ -37,12 +38,12 @@ public class Car extends Device {
         Car car = (Car) o;
         return
                 Objects.equals(plates, car.plates) &&
-                Objects.equals(value, car.value);
+                        Objects.equals(value, car.value);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash( plates, value);
+        return Objects.hash(plates, value);
     }
 
     @Override
@@ -56,6 +57,19 @@ public class Car extends Device {
                 ", plates='" + plates + '\'' +
                 ", value=" + value +
                 '}';
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.getCar() != null) {
+            if (buyer.getCash() > price) {
+                buyer.setCash(buyer.getCash() - price);
+                seller.setCash(seller.getCash() + price);
+                buyer.setCar(seller.getCar());
+                seller.setCar(null);
+                System.out.println("Car deal");
+            }
+        }
     }
 }
 

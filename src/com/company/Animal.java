@@ -1,8 +1,10 @@
 package com.company;
 
+import com.company.devices.Salleable;
+
 import java.io.File;
 
-public class Animal {
+public class Animal implements Salleable {
     private final String species;
     private Double weight;
 
@@ -48,5 +50,18 @@ public class Animal {
                 ", name='" + name + '\'' +
                 ", pic=" + pic +
                 '}';
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.getPet()!= null){
+            if (buyer.getCash()>price){
+                buyer.setCash(buyer.getCash()-price);
+                seller.setCash(seller.getCash()+price);
+                buyer.setPet(seller.getPet());
+                seller.setPet(null);
+                System.out.println("Animal deal");
+            }
+        }
     }
 }
