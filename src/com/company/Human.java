@@ -45,10 +45,16 @@ public class Human {
     }
 
     public void setCar(Car car) {
-        this.car=car;
-//        if (car.getValue() == null || car.getValue() > this.salary * 12) {
-//            throw new Exception("nie stać Cię");
-//        } else this.car = car;
+        if (car.getValue()<salary) {
+            System.out.println("You bought a car");
+            this.car=car;
+        } else if (salary>car.getValue()/12) {
+            System.out.println("You bought a car on loan");
+            this.car=car;
+        } else {
+            System.out.println("You have to get some money");
+        }
+
     }
 
     public String getFirstName() {
