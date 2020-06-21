@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -9,7 +11,7 @@ public class Main {
         Human human = new Human("Michał", "Jakusz");
         Phone phone = new Phone();
 
-        Animal dog = new Animal("dog");
+        Pet dog = new Pet("dog");
         dog.takeForAWalk();
         dog.takeForAWalk();
         dog.takeForAWalk();

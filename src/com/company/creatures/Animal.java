@@ -1,11 +1,12 @@
-package com.company;
+package com.company.creatures;
 
+import com.company.Human;
 import com.company.devices.Salleable;
 
 import java.io.File;
 
-public class Animal implements Salleable {
-    private final String species;
+public abstract class Animal implements Salleable, Feedable {
+    private  String species;
     private Double weight;
 
     private String name;
@@ -23,7 +24,7 @@ public class Animal implements Salleable {
         }
     }
 
-    void feed() {
+    public void feed() {
         if (weight == 0) {
             System.out.println("too late , sorry food will not help since I'm dead");
         } else {
@@ -33,7 +34,7 @@ public class Animal implements Salleable {
 
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (weight == 0) {
             System.out.println("too late , sorry  I'm dead");
         } else {
@@ -63,5 +64,8 @@ public class Animal implements Salleable {
                 System.out.println("Animal deal");
             }
         }
+    }
+
+    public Animal() {
     }
 }
