@@ -16,14 +16,17 @@ public class Main {
         dog.feed();
         dog.feed();
 
-        Car car = new Car("fiat","audi");
+        Car car = new Car();
         human.setCar(car);
-        Car car2=new Car("fiat","audi");
+        Car car2=new Car();
         System.out.println(car.equals(car2));
         System.out.println(car);
         System.out.println(car2);
         System.out.println(human);
         System.out.println(dog);
+        car.turnOn();
+        phone.turnOn();
+
     }
 
 }
