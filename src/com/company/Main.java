@@ -52,5 +52,26 @@ public class Main {
         car.sell(andrzej, rob,1000.0);
 
         System.out.println(car.wasCarSelled(andrzej, rob));
+
+
+        Phone mPhone=new Phone();
+        mPhone.setPhoneOwner(andrzej);
+        Application nApp=new Application();
+        Application nApp2=new Application();
+        nApp.setName("Asd");
+        nApp2.setName("Bnm");
+        nApp.setPrice(200.0);
+        nApp2.setPrice(0.0);
+        mPhone.install(nApp);
+        mPhone.install(nApp2);
+
+        System.out.println(mPhone.isAppInstalled(nApp));
+        System.out.println(mPhone.isAppInstalled(nApp2.getName()));
+        mPhone.printFreeApp();
+        System.out.println(mPhone.sumAppValues());
+        mPhone.printAppsNames();
+        mPhone.printAppsPrices();
+
+
     }
 }
