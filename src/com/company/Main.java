@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,5 +18,12 @@ public class Main {
 
         Car car = new Car("fiat","audi");
         human.setCar(car);
+        Car car2=new Car("fiat","audi");
+        System.out.println(car.equals(car2));
+        System.out.println(car);
+        System.out.println(car2);
+        System.out.println(human);
+        System.out.println(dog);
     }
+
 }

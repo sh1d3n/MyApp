@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 import java.time.LocalDateTime;
 
 public class Human {
@@ -89,5 +92,16 @@ public class Human {
         this.pet = pet;
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "car=" + car +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", mobile=" + mobile +
+                ", pet=" + pet +
+                ", salary=" + salary +
+                '}';
+    }
 }
 
