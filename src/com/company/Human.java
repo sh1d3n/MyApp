@@ -1,5 +1,7 @@
 package com.company;
 
+import java.time.LocalDateTime;
+
 public class Human {
     private Car car;
     private String firstName;
@@ -8,14 +10,30 @@ public class Human {
     private Animal pet;
     private Double salary = 1000.0;
 
+
+
     public Human(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
     public Double getSalary() {
+        System.out.println("Last salary was checked " + LocalDateTime.now());
+        System.out.println("Salary was " + salary);
         return salary;
     }
+    public void setSalary(Double salary) {
+        if (salary < 0) {
+            System.out.println("I think it's impossible");
+        } else {
+            System.out.println("New data  has been sent to the accounting system");
+            System.out.println("You need to pick up annex from Mrs Hanna. You can find her at human resources");
+            System.out.println("Don't try to be sneaky with your income , ZUS and US already know everything");
+        }
+        this.salary=salary;
+    }
+
+
 
     public void riseMySalary() {
         this.salary *= 1.1;
@@ -65,8 +83,5 @@ public class Human {
         this.pet = pet;
     }
 
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
 }
 
