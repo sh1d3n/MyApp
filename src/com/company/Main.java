@@ -18,9 +18,9 @@ public class Main {
         dog.feed();
         dog.feed();
 
-        Car car = new Car();
+        LPG car = new LPG();
         human.setCar(car);
-        Car car2=new Car();
+        LPG car2=new LPG();
         System.out.println(car.equals(car2));
         System.out.println(car);
         System.out.println(car2);

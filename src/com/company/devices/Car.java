@@ -4,10 +4,11 @@ import com.company.Human;
 
 import java.util.Objects;
 
-public class Car extends Device implements Salleable {
+public abstract  class Car extends Device implements Salleable {
 
     private String plates;
     private Integer value = 10000;
+    public abstract void refuel();
 
 
     public String getPlates() {
