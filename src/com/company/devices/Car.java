@@ -4,10 +4,10 @@ import com.company.Human;
 
 import java.util.Objects;
 
-public abstract  class Car extends Device implements Salleable {
+public abstract class Car extends Device implements Salleable {
 
     private String plates;
-    private Integer value = 10000;
+
     public abstract void refuel();
 
 
@@ -24,53 +24,44 @@ public abstract  class Car extends Device implements Salleable {
     }
 
 
-    public Integer getValue() {
-        return value;
-    }
-
-    public void setValue(Integer value) {
-        this.value = value;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return
-                Objects.equals(plates, car.plates) &&
-                        Objects.equals(value, car.value);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(plates, value);
-    }
-
     @Override
     public void turnOn() {
         System.out.println("turnOn from car");
     }
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                ", plates='" + plates + '\'' +
-                ", value=" + value +
-                '}';
-    }
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (seller.getCar(0) != null) {
+            if (buyer.getCar(0) == null) {
+                if (buyer.getCash() > price) {
+                    buyer.setCar(0, seller.getCar(0));
+                    seller.setCar(0, null);
+                    buyer.setCash(buyer.getCash() - price);
+                    seller.setCash(seller.getCash() + price);
+                    System.out.println("Transaction success");
 
-    @Override
-    public void sell(Human seller, Human buyer, Double price) {
-        if (seller.getCar() != null) {
-            if (buyer.getCash() > price) {
-                buyer.setCash(buyer.getCash() - price);
-                seller.setCash(seller.getCash() + price);
-                buyer.setCar(seller.getCar());
-                seller.setCar(null);
-                System.out.println("Car deal");
+                } else {
+                    throw new Exception("Not enough for buyer");
+                }
+            } else {
+                throw new Exception("Buyer has no space");
             }
+        } else {
+            throw new Exception("Buyer hasn't got car in garage");
         }
     }
+
+
+//    @Override
+//    public void sell(Human seller, Human buyer, Double price) {
+//        if (seller.getCar() != null) {
+//            if (buyer.getCash() > price) {
+//                buyer.setCash(buyer.getCash() - price);
+//                seller.setCash(seller.getCash() + price);
+//                buyer.setCar(seller.getCar());
+//                seller.setCar(null);
+//                System.out.println("Car deal");
+//            }
+//        }
+//    }
 }
 

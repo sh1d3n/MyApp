@@ -7,7 +7,7 @@ import com.company.devices.Phone;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Human human = new Human("Michał", "Jakusz");
         Phone phone = new Phone();
 
@@ -19,7 +19,6 @@ public class Main {
         dog.feed();
 
         LPG car = new LPG();
-        human.setCar(car);
         LPG car2=new LPG();
         System.out.println(car.equals(car2));
         System.out.println(car);
@@ -35,6 +34,18 @@ public class Main {
         Human buyer=new Human();
         buyer.setCash(100000.0);
         dog.sell(seller,buyer,10000.0);
+
+        Human rob=new Human();
+        rob.setCar(0,car);
+        rob.setCar(1,car2);
+        System.out.println(rob.sumCarValue());
+        rob.setCash(13000.0);
+
+        Human andrzej=new Human();
+        andrzej.setCash(20000.0);
+        car.sell(rob,andrzej,1000.0);
+
+
 
     }
 

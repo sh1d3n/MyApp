@@ -4,8 +4,8 @@ public abstract class Device {
     private String producer;
     private String model;
     private Integer yearOfProduction;
+    private Integer value = 10000;
     public abstract void turnOn();
-
     @Override
     public String toString() {
         return "Device{" +
@@ -13,5 +13,9 @@ public abstract class Device {
                 ", model='" + model + '\'' +
                 ", yearOfProduction=" + yearOfProduction +
                 '}';
+    }
+
+    public Integer getValue() {
+        return value;
     }
 }
