@@ -34,9 +34,9 @@ public class Human implements Salleable {
         if (salary < 0) {
             System.out.println("I think it's impossible");
         } else {
-            System.out.println("New data  has been sent to the accounting system");
-            System.out.println("You need to pick up annex from Mrs Hanna. You can find her at human resources");
-            System.out.println("Don't try to be sneaky with your income , ZUS and US already know everything");
+            System.out.println("New data sent to the system");
+            System.out.println("You need to pick up annex from  Hanna.");
+            System.out.println("Don't try to hide income.ZUS & US know about all of changes");
         }
         this.salary=salary;
     }
