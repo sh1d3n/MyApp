@@ -18,5 +18,5 @@ Projekt zostanie wznowiony. Będą dodawane do niego funkcjonalności takie jak:
 
 ## Wykorzystywane źródła
 *w3schools.com
-https://www.w3schools.com/java/
+*https://www.w3schools.com/java/
 
