@@ -17,6 +17,7 @@ Projekt polega na stworzeniu człowieka, akcesoriów oraz samochodów o różnyc
 Projekt zostanie wznowiony. Będą dodawane do niego funkcjonalności takie jak: dodanie jednośladów, dodanie samochodów ciężarowych, użtykownik będzie miał możliwość kupowania ubezpieczeń do pojazdów.
 
 ## Wykorzystywane źródła
-*w3schools.com
-*https://www.w3schools.com/java/
+* w3schools.com
+* https://www.w3schools.com/java/
+
 
