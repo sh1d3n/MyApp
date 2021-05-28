@@ -12,6 +12,8 @@ Projekt polega na stworzeniu człowieka, akcesoriów oraz samochodów o różnyc
 
 ## Technologie 
 * Java
+* MySQL
+
 
 ## Status projektu
 Projekt zostanie wznowiony. Będą dodawane do niego funkcjonalności takie jak: dodanie jednośladów, dodanie samochodów ciężarowych, użtykownik będzie miał możliwość kupowania ubezpieczeń do pojazdów.
